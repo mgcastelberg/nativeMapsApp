@@ -17,7 +17,7 @@ export const requestLocationPermission = async ():Promise<PermissionStatus> => {
 
     if (status === 'blocked') {
         await openSettings();
-        // return checkLocationPermission();
+        return await checkLocationPermission();
     }
 
     // Mapa como si usaramos un switch
