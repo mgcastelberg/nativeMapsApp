@@ -13,7 +13,8 @@ const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator 
+    <Stack.Navigator
+      initialRouteName="PermissionScreen"
         screenOptions={{
             headerShown: false,
             cardStyle: {
