@@ -1,14 +1,14 @@
-
 import 'react-native-gesture-handler';
-
 import { NavigationContainer } from '@react-navigation/native'
-import { Text, View } from 'react-native'
 import { StackNavigator } from './presentation/navigation/StackNavigator';
+import { PermissionChecker } from './presentation/providers/PermissionChecker';
 
 export const MapsApp = () => {
     return (
         <NavigationContainer>
-            <StackNavigator />
+            <PermissionChecker>
+                <StackNavigator />
+            </PermissionChecker>
         </NavigationContainer>
     )
 }
